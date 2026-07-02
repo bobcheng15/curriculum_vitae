@@ -15,7 +15,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{cvclass}[2026/01/25 v1.13 Curriculum Vitae class]
+\ProvidesClass{cvclass}[2026/07/02 v1.14 Curriculum Vitae class]
 \LoadClass[10pt,a4paper]{article}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -31,6 +31,7 @@
 \RequirePackage{titlesec}
 \RequirePackage[parfill]{parskip}
 \RequirePackage{graphicx}
+\RequirePackage{xstring}
 \RequirePackage{hyperref}
 \RequirePackage{enumitem}
 \RequirePackage{tabularx}
@@ -99,7 +100,10 @@
 %% Formatting
 
 \newcommand{\formatphone}[1]{\textbf{Phone:} \texttt{#1}}
-\newcommand{\formatemail}[1]{\textbf{Email:} \href{mailto:#1}{\texttt{#1}}}
+\newcommand{\formatemail}[1]{\textbf{Email:} \texttt{%
+    \StrSubstitute{#1}{\string @}{ [AT] }[\emailtmp]%
+    \StrSubstitute{\emailtmp}{.}{ [DOT] }}}
+
 \newcommand{\makeinfo}{
     \ifx\@name\empty\else
         {\Huge \bfseries \scshape \@name} \bigskip \bigskip \bigskip \\
