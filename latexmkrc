@@ -9,3 +9,6 @@
 ############################################################
 
 $ENV{'TZ'}='Asia/Taipei';
+
+# Compile with XeLaTeX (matches upstream template v1.14)
+$pdf_mode = 5;
