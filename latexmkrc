@@ -8,7 +8,10 @@
 #   https://www.php.net/manual/en/timezones.php
 ############################################################
 
-$ENV{'TZ'}='Asia/Taipei';
+$ENV{'TZ'}='America/Los_Angeles';
 
 # Compile with XeLaTeX (matches upstream template v1.14)
 $pdf_mode = 5;
+
+# Name the output CV.pdf
+$jobname = 'CV';

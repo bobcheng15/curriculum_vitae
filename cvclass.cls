@@ -134,8 +134,8 @@
 \newcommand{\education}[5]{
     \begin{tabularx}{\linewidth}{Xr}
         \textbf{#1} &
-            \multirow{3}{*}{\includegraphics[#3]{#4}} \\ \\
-        \textit{\underline{#2}} \\ \\
+            \multirow{3}{*}{\includegraphics[#3]{#4}} \\[0.3em]
+        \textit{\underline{#2}} \\[0.3em]
         \begin{minipage}[t]{\linewidth} #5 \end{minipage}
     \end{tabularx}}
     
