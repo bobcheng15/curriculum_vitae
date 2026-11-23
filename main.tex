@@ -24,7 +24,7 @@
 
 \name{Bo Wun Cheng}
 \jobtitle{Ph.D. Candidate}
-\address{Stanford University. \\
+\address{Stanford University \\
     450 Jane Stanford Way  \\
     Stanford, California 94305, U.S.A. \\}
 \email{bwcheng@stanford.edu}
@@ -39,22 +39,18 @@
 \section{Education}
 \education{Stanford University, Stanford, CA, U.S.A.}
     {Advisor: Prof. Priyanka Raina}
-    {width=.1\linewidth}{logos-png/SU_Seal_Red.png}{
+    {width=0.13\linewidth}{logos-png/SU_Seal_Red.png}{
     \begin{itemize}
         \item Ph.D. in Electrical Engineering -- \textit{\simplemmyy{2023}{07}{16} - Present}
         \begin{itemize}
-             \item Interests: 
-                \begin {itemize}
-                    \item Machine Learning Hardware Accelerators
-                    \item Reconfigurable Computing Architecture
-                \end{itemize}
+             \item Interests: Sparsity-Aware Machine Learning Accelerator Architecture
         \end{itemize}
     \end{itemize}}
 \medskip
     
 \education{National Tsing Hua University, Hsinchu, Taiwan}
         {Advisor: Prof. Chun-Yi Lee}
-        {width=.1\linewidth}{logos-png/national-tsing-hua-university.png}{
+        {width=0.13\linewidth}{logos-png/national-tsing-hua-university.png}{
     \begin{itemize}
         \item M.S. in Computer Science -- \textit{\simplemmyy{2023}{01}{15}}
         \begin{itemize}
@@ -105,26 +101,38 @@
 % Professional and Research Experience
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Professional and Research Experiences}
+\section{Research and Professional Experience}
 \experience{Research Assistant}
-    {AHA Agile Hardware Project}
+    {Stanford Accelerate Group}
     {Stanford University}
     {\simplemmyy{2023}{07}{16} - Present}
-    {width=0.1\linewidth}{logos-png/SU_Seal_Red.png}
+    {width=0.13\linewidth}{logos-png/SU_Seal_Red.png}
 \begin{itemize}
-    \item Advisor: \textit{Prof. Priyanka Raina}
-    \item Implement key modules in the latest Coarse-Grained Reconfigurable Array (CGRA) aimed at accelerating sparse machine learning (ML)
-    \item Implement data validation and kernel mapping of sparse ML applications for the CGRA
-    \item Assist in the bring up and measurement of the fabricated CGRA
+    \item \textbf{Opal}: 16-nm CGRA SoC for sparse machine learning (ML) [1], [2]
+    \begin{itemize}
+        \item Designed, extended, and verified sparse primitives in the CGRA to enable full sparse ML inference on chip
+        \item Built the sparse ML mapping and validation flow from PyTorch to both the CGRA RTL and bare-metal SoC
+        \item Brought up the post-silicon testchip and measured all sparse scientific computing and sparse ML workloads
+    \end{itemize}
+    \item \textbf{EE372 MXINT8 Accelerator SoC} (\textit{Tapeout Lead}): 16-nm systolic array for edge multimodal ML
+    \begin{itemize}
+        \item Integrated all student HLS designs into the SoC and made architectural changes to reduce its area
+        \item Led the full physical design flow (synthesis, P\&R, STA/ECO) through tapeout in Jan. 2026
+        \item Led post-silicon bring-up and measurement of the ML workloads; results are in a paper under review
+    \end{itemize}
+    \item \textbf{4-bit LLM Accelerator SoC}: 7-nm systolic array for large language models (LLMs)
+    \begin{itemize}
+        \item Designed and verified the sparse outlier processing unit in HLS for 4-bit LLM activation quantization
+        \item Contributed to the physical design flow (synthesis, P\&R, STA/ECO) through tapeout in Apr. 2026
+    \end{itemize}
 \end{itemize}
 \experience{Research Assistant}
     {ELSA Lab}
-    {National Tsing Hua University, Taiwan\footnote{ELSA Lab has moved to National Taiwan University, Taipei City, Taiwan since 2024.}}
+    {National Tsing Hua University, Taiwan\footnote{ELSA Lab moved to National Taiwan University, Taipei, Taiwan, in 2024.}}
     {Jul. 2020 - Mar. 2023}
-    {width=0.1\linewidth}{logos-png/elsa-lab.png}
+    {width=0.13\linewidth}{logos-png/elsa-lab.png}
 \begin{itemize}
-    \item Advisor: \textit{Prof. Chun-Yi Lee}
-    \item Performed research on graphics processing unit architecture solution for capturing cross-processor memory reuse
+    \item Proposed an architecture for collaborative handling of replicated GPU cache requests [5]
 \end{itemize}
 % \experience{IT Manager}
 %     {ELSA Lab}
@@ -140,10 +148,9 @@
     {Multimedia Team}
     {MediaTek Inc., Taiwan}
     {Mar. 2021 - Feb. 2022}
-    {width=0.1\linewidth}{logos-png/mediatek.png}
+    {width=0.13\linewidth}{logos-png/mediatek.png}
 \begin{itemize}
-    \item Surveyed literature on computer vision methods for domain adaptation
-    \item Assisted with the writing of research papers
+    \item Surveyed computer vision methods for domain adaptation and assisted with writing research papers
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -172,14 +179,12 @@
 % Technical Skills
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \section{Skills}
-
-% \begin{itemize}
-%     \sepitem{Programming Languages}{C/C++, CUDA, Verilog, Python}
-%     \sepitem{Software \& Tools}{Xilinx FPGAs, Xilinx VIVADO, Docker, LaTeX, Git}
-%     \sepitem{Operating Systems}{Ubuntu, macOS, MS Windows}
-%     \sepitem{Languages}{English, Taiwanese Hokkien, Mandarin}
-% \end{itemize}
+\section{Skills}
+\begin{itemize}
+    \item \textbf{Hardware Design:} Catapult HLS (SystemC), Verilog
+    \item \textbf{EDA Tools:} Synopsys Design Compiler, Cadence Innovus, Cadence Pegasus, Synopsys PrimeTime (STA/ECO)
+    \item \textbf{Software \& Tools:} Python, PyTorch, C/C++, Git, Docker
+\end{itemize}
 
 
 
